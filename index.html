@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realestate</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="chatBot.css">
+  <script src="chatBot.js" defer></script>
+
+</head>
+
+<body>
+
+
+
+  <div class="pop-Up">
+    <p>
+      Double Click on the icon to access ChatBot!
+    </p>
+  </div>
+  <img src="Chatbot Purple.png" alt="ChatBot" id="chatbot-image" onclick="toggleHide()">
+  <div class="chatBot">
+    <header>
+      <h2>
+        ChatBot
+      </h2>
+      <img src="cross.png" alt="Cross/Cut" id="cross" onclick="cancel()">
+    </header>
+    <ul class="chatbox">
+      <li class="chat-incoming chat">
+        <p>
+          Hey there 👍
+          <br>How can I help you today?
+        </p>
+      </li>
+      <br>
+    </ul>
+
+    <br>
+    <div class="chat-input">
+      <span><img src="send.png" alt="Send Button" id="sendBTN"></span>
+      <textarea rows="0" cols="17" placeholder="Enter a message..."></textarea>
+    </div>
+  </div>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <ion-icon name="home-outline"></ion-icon> Realestate
+      </a>
+
+      <nav class="navbar container" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>Buy</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>Sell</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>Listing</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <a href="#" class="btn btn-secondary">Signup</a>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" aria-hidden="true" class="close-icon"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+    <article class="article">
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-bg">
+            <div class="hero-content">
+
+              <h1 class="h1 hero-title">
+                We will help you find your <span class="span">Dream</span> home
+              </h1>
+
+              <p class="hero-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, voluptatem!
+              </p>
+
+              <div id="all_images" >
+                <img src="house.avif" alt="House"class="image_house" >
+                <img src="house2.avif" alt="House"class="image_house" >
+                <img src="house3.avif" alt="House"class="image_house" >
+                <img src="house4.avif" alt="House"class="image_house" >
+                <!-- <img src="house.avif" alt="House"class="image_house" > -->
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="hero-form-wrapper">
+            <div class="form-tab">
+
+              <button class="tab-btn active" data-tab-btn>Buy</button>
+              <button class="tab-btn" data-tab-btn>Sell</button>
+              <button class="tab-btn" data-tab-btn>Rent</button>
+
+            </div>
+
+            <form action="" class="hero-form">
+
+              <div class="input-wrapper">
+
+                <label for="search" class="input-label">Search : *</label>
+
+                <input type="search" name="search" id="search" placeholder="Search your home" required
+                  class="input-field">
+
+                <ion-icon name="search-outline"></ion-icon>
+
+              </div>
+
+              <div class="input-wrapper">
+                <label for="category" class="input-label">Select Categories:</label>
+
+                <select name="category" id="category" class="dropdown-list">
+
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="offices">Offices</option>
+                  <option value="townhome">Townhome</option>
+
+                </select>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="min-price" class="input-label">Min Price :</label>
+
+                <select name="min-price" id="min-price" class="dropdown-list">
+
+                  <option value="min price">Min Price</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                  <option value="2000">2000</option>
+                  <option value="3000">3000</option>
+                  <option value="4000">4000</option>
+                  <option value="5000">5000</option>
+                  <option value="6000">6000</option>
+
+                </select>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="max-price" class="input-label">Max Price :</label>
+
+                <select name="max-price" id="max-price" class="dropdown-list">
+
+                  <option value="max price">Max Price</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                  <option value="2000">2000</option>
+                  <option value="3000">3000</option>
+                  <option value="4000">4000</option>
+                  <option value="5000">5000</option>
+                  <option value="6000">6000</option>
+
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Search now</button>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- about section -->
+      <section class="section about" aria-label="about">
+        <div class="container">
+
+          <div class="about-banner img-holder">
+            <!-- <img src="about-banner.jpg" width="600" height="700" loading="lazy" alt="about banner"
+              class="img-cover"> -->
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player class="animation-home" src="https://assets5.lottiefiles.com/packages/lf20_vvtkfqbo.json"
+              background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></lottie-player>
+
+            <!-- <button class="play-btn" aria-label="play video">
+              <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button> -->
+          </div>
+
+          <div class="about-content">
+
+            <h2 class="h2 section-title">Efficiency. Transparency. Control.</h2>
+
+            <p class="section-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum eius officiis aspernatur explicabo neque
+              et, quae quasi distinctio magnam corporis veritatis voluptatem repellendus deserunt perferendis eligendi
+              repellat unde quibusdam. Dolores.
+            </p>
+
+            <a href="#" class="btn btn-primary">Learn More</a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- service -->
+
+      <div id="services">
+        <div class="container">
+          <h1 style="color: black; text-align: center;" class="sub-title">Our Services </h1>
+          <div class="services-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Evaluate Property</h2>
+              <br>
+              <p>If the distribution of letters and 'words' is random, <br> the reader will not be distracted from
+                making.</p>
+              <a href="#">learn more</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-pen"></i>
+              <h2>Meeting Agent</h2>
+              <br>
+              <p> If the distribution of letters and 'words' is random, <br>the reader will not be distracted from
+                making.</p>
+              <a href="#">learn more</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-question"></i>
+              <h2>Close the Deal</h2>
+              <br>
+              <p> If the distribution of letters and 'words' is random, <br> the reader will not be distracted from
+                making.</p>
+              <a href="#">learn more</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- properties -->
+
+
+
+        <section class="section property" aria-label="property">
+          <div class="container">
+
+            <h2 class="h2 section-title">Featured Properties</h2>
+
+            <p class="section-text">
+              A great plateform to buy, sell and rent your properties without any agent or commisions.
+            </p>
+
+            <ul class="property-list">
+
+              <li>
+                <div class="property-card">
+
+                  <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
+                    <img src="property-5.jpg" width="800" height="533" loading="lazy"
+                      alt="10765 Hillshire Ave, Baton Rouge, LA 70810, USA" class="img-cover">
+                  </figure>
+
+                  <button class="card-action-btn" aria-label="add to favourite">
+                    <ion-icon name="heart" aria-hidden="true"></ion-icon>
+                  </button>
+
+                  <div class="card-content">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">F-309 Delta-1 Greater Noida, 201310</a>
+                    </h3>
+                    <br>
+
+
+
+                    <div class="card-meta">
+
+                      <div>
+                        <span class="meta-title">Price</span>
+
+                        <span class="meta-text">$5000</span>
+                      </div>
+
+                      <div>
+                        <span class="meta-title">Rating</span>
+
+                        <span class="meta-text">
+
+                          <div class="rating-wrapper">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+
+                          <span>5.0(30)</span>
+
+                        </span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="property-card">
+
+                  <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
+                    <img src="property-6.jpg" width="800" height="533" loading="lazy"
+                      alt="59345 STONEWALL DR, Plaquemine, LA 70764, USA" class="img-cover">
+                  </figure>
+
+                  <button class="card-action-btn" aria-label="add to favourite">
+                    <ion-icon name="heart" aria-hidden="true"></ion-icon>
+                  </button>
+
+                  <div class="card-content">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">F-309 Delta-1 Greater Noida, 201310</a>
+                    </h3>
+
+
+
+                    <div class="card-meta">
+
+                      <div>
+                        <span class="meta-title">Price</span>
+
+                        <span class="meta-text">$5000</span>
+                      </div>
+
+                      <div>
+                        <span class="meta-title">Rating</span>
+
+                        <span class="meta-text">
+
+                          <div class="rating-wrapper">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+
+                          <span>5.0(30)</span>
+
+                        </span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="property-card">
+
+                  <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
+                    <img src="property-4.jpg" width="800" height="533" loading="lazy"
+                      alt="3723 SANDBAR DR, Addis, LA 70710, USA" class="img-cover">
+                  </figure>
+
+                  <button class="card-action-btn" aria-label="add to favourite">
+                    <ion-icon name="heart" aria-hidden="true"></ion-icon>
+                  </button>
+
+                  <div class="card-content">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">F-309 Delta-1 Greater Noida, 201310</a>
+                    </h3>
+
+
+
+                    <div class="card-meta">
+
+                      <div>
+                        <span class="meta-title">Price</span>
+
+                        <span class="meta-text">$5000</span>
+                      </div>
+
+                      <div>
+                        <span class="meta-title">Rating</span>
+
+                        <span class="meta-text">
+
+                          <div class="rating-wrapper">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+
+                          <span>5.0(30)</span>
+
+                        </span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="property-card">
+
+                  <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
+                    <img src="property-3.jpg" width="800" height="533" loading="lazy"
+                      alt="LOT 21 ROYAL OAK DR, Prairieville, LA 70769, USA" class="img-cover">
+                  </figure>
+
+                  <button class="card-action-btn" aria-label="add to favourite">
+                    <ion-icon name="heart" aria-hidden="true"></ion-icon>
+                  </button>
+
+                  <div class="card-content">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">F-309 Delta-1 Greater Noida, 201310</a>
+                    </h3>
+
+
+
+                    <div class="card-meta">
+
+                      <div>
+                        <span class="meta-title">Price</span>
+
+                        <span class="meta-text">$5000</span>
+                      </div>
+
+                      <div>
+                        <span class="meta-title">Rating</span>
+
+                        <span class="meta-text">
+
+                          <div class="rating-wrapper">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+
+                          <span>5.0(30)</span>
+
+                        </span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="property-card">
+
+                  <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
+                    <img src="property-1.jpg" width="800" height="533" loading="lazy"
+                      alt="710 BOYD DR, Unit #1102, Baton Rouge, LA 70808, USA" class="img-cover">
+                  </figure>
+
+                  <button class="card-action-btn" aria-label="add to favourite">
+                    <ion-icon name="heart" aria-hidden="true"></ion-icon>
+                  </button>
+
+                  <div class="card-content">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">F-309 Delta-1 Greater Noida, 201310</a>
+                    </h3>
+
+
+                    <div class="card-meta">
+
+                      <div>
+                        <span class="meta-title">Price</span>
+
+                        <span class="meta-text">$5000</span>
+                      </div>
+
+                      <div>
+                        <span class="meta-title">Rating</span>
+
+                        <span class="meta-text">
+
+                          <div class="rating-wrapper">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+
+                          <span>5.0(30)</span>
+
+                        </span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="property-card">
+
+                  <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
+                    <img src="property-2.jpg" width="800" height="533" loading="lazy"
+                      alt="5133 MCLAIN WAY, Baton Rouge, LA 70809, USA" class="img-cover">
+                  </figure>
+
+                  <button class="card-action-btn" aria-label="add to favourite">
+                    <ion-icon name="heart" aria-hidden="true"></ion-icon>
+                  </button>
+
+                  <div class="card-content">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">F-309 Delta-1 Greater Noida, 201310</a>
+                    </h3>
+
+                    <!-- <ul class="card-list">
+
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon name="cube-outline"></ion-icon>
+                      </div>
+
+                      <span class="item-text">8000sqf</span>
+                    </li>
+
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon name="bed-outline"></ion-icon>
+                      </div>
+
+                      <span class="item-text">4 Beds</span>
+                    </li>
+
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon name="man-outline"></ion-icon>
+                      </div>
+
+                      <span class="item-text">4 Baths</span>
+                    </li>
+
+                  </ul> -->
+
+                    <div class="card-meta">
+
+                      <div>
+                        <span class="meta-title">Price</span>
+
+                        <span class="meta-text">$5000</span>
+                      </div>
+
+                      <div>
+                        <span class="meta-title">Rating</span>
+
+                        <span class="meta-text">
+
+                          <div class="rating-wrapper">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+
+                          <span>5.0(30)</span>
+
+                        </span>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+        <!-- 
+        - #CONTACT
+      -->
+
+        <section class="section contact" aria-label="contact">
+          <div class="container">
+
+            <h2 class="h2 section-title">Have Question ? Get in touch!</h2>
+
+            <p class="section-text">
+              A great plateform to buy, sell and rent your properties without any agent or commisions.
+            </p>
+
+            <button class="btn btn-primary">
+              <ion-icon name="call-outline"></ion-icon>
+
+              <span class="span">Contact us</span>
+            </button>
+
+          </div>
+        </section>
+
+
+
+
+
+        <!-- 
+        - #NEWSLETTER
+      -->
+
+        <section class="newsletter" aria-label="newsletter">
+          <div class="container">
+
+            <div class="wrapper">
+              <h2 class="h2 section-title">Subscribe to Newsletter!</h2>
+
+              <p class="section-text">Subscribe to get latest updates and information.</p>
+            </div>
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email_address" placeholder="Enter your email :" aria-label="Enter your email"
+                required class="email-field">
+
+              <button type="submit" class="btn btn-secondary">Subscribe</button>
+            </form>
+
+          </div>
+        </section>
+
+        <!-- 
+    - #FOOTER
+  -->
+
+        <footer class="footer">
+
+          <div class="footer-top">
+            <div class="container">
+
+              <div class="footer-brand">
+
+                <a href="#" class="logo">
+                  <ion-icon name="business-outline"></ion-icon> Realestate
+                </a>
+
+                <p class="footer-text">
+                  A great plateform to buy, sell and rent your properties without any agent or commisions.
+                </p>
+
+              </div>
+
+              <ul class="footer-list">
+
+                <li>
+                  <p class="footer-list-title">Company</p>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">About us</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">Services</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">Pricing</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">Blog</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">Login</span>
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="footer-list">
+
+                <li>
+                  <p class="footer-list-title">Useful Links</p>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">Terms of Services</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">Privacy Policy</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">Listing</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link">
+                    <ion-icon name="chevron-forward"></ion-icon>
+
+                    <span class="span">Contact</span>
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="footer-list">
+
+                <li>
+                  <p class="footer-list-title">Contact Details</p>
+                </li>
+
+                <li class="footer-item">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <address class="address">
+                    xyxyxyxyx<br>
+                    558,<br>
+                    485
+                    <a href="#" class="address-link">View on Google map</a>
+                  </address>
+                </li>
+
+                <li class="footer-item">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <a href="mailto:contact@example.com" class="footer-link">contact@example.com</a>
+                </li>
+
+                <li class="footer-item">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <a href="tel:+152534468854" class="footer-link">+152 534-468-854</a>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="container">
+
+              <p class="copyright">
+                &copy; 2022 Realestate. All Right Reserved by Realestate<a href="#" class="copyright-link"></a>
+              </p>
+
+              <ul class="social-list">
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+
+        </footer>
+
+
+
+
+
+        <!-- 
+    - #BACK TO TOP
+  -->
+
+        <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+          <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+        </a>
+
+
+
+
+
+
+        <!-- 
+    - custom js link
+  -->
+        <script src=".js"></script>
+
+        <!-- 
+    - ionicon link
+  -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
